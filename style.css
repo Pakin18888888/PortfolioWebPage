@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+
+:root{
+    --primary: #158afe;
+    --primary-light: #FFFFFF;
+    --primary-dark: #101820;
+
+    --space-xs: 0.5rem;
+    --space-sm: 0.75rem;
+    --space-md: 1.25rem;
+    --space-lg: 1.75rem;
+    --space-xl: 2.5rem;
+    --space-xxl: 3rem;
+    --space-xxxl: 4.25rem;
+    --space-xxxxl: 5rem;
+
+    --transition-smoment: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
