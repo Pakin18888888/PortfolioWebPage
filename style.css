@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 
-:root{
-    --primary: #158afe;
-    --primary-light: #FFFFFF;
-    --primary-dark: #101820;
+:root {
+    --primary: #D92929;
+    --primary-light: #F2F1F0;
+    --primary-dark: #0D0D0D;
 
     --space-xs: 0.5rem;
     --space-sm: 0.75rem;
@@ -18,3 +18,18 @@
     --transition-smoment: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
+body {
+    font-family: 'Prompt', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--primary-light);
+    color: var(--primary-dark);
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 1,
+        'wght' 500,
+        'GRAD' 0,
+        'opsz' 24
+}
