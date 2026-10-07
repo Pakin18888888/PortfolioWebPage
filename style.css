@@ -74,7 +74,6 @@ body {
 }
 
 .hobby,
-.skills,
 .project {
     border-top: 0.05px solid var(--primary-dark);
 }
@@ -280,4 +279,35 @@ body {
     font-size: 32px;
     font-weight: 400;
     color: var(--primary);
+}
+
+#skills{
+    width: 100%;
+    background-color: var(--primary-dark);
+}
+
+.skills{
+    color: var(--primary-light);
+    
+}
+
+.skills h1{
+    font-size: 96px;
+}
+
+.skills-item{
+    list-style: none;
+    border-top: 0.05px solid var(--primary-light);
+}
+
+.item1{
+    border-bottom: 0.05px solid var(--primary-light);
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 100px;
+    font-size: 24px;
+    margin: var(--space-xl) var(--space-sm) var(--space-xl) var(--space-sm);
 }
