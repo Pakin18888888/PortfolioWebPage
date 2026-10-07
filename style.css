@@ -60,21 +60,21 @@ body {
 
 #profile,
 #hobby,
-#skillset,
+#skills,
 #project {
     width: 100%;
 }
 
 .profile,
 .hobby,
-.skillset,
+.skills,
 .project {
     margin: 0 var(--space-xxxxl);
     margin-bottom: var(--space-xl);
 }
 
 .hobby,
-.skillset,
+.skills,
 .project {
     border-top: 0.05px solid var(--primary-dark);
 }
@@ -173,16 +173,17 @@ body {
 }
 
 .hobby-content {
-    margin-top: var(--space-xxxl);
+    margin: var(--space-xxxxl);
+    margin-bottom: 100px;
     display: flex;
-    gap: var(--space-xxxxl);
+    gap: var(--space-sm);
     justify-content: center;
     align-items: center;
     flex-direction: row;
 }
 
 .hobby-content-img {
-    width: 15%;
+    width: 55%;
     aspect-ratio: 1 / 1;
     overflow: hidden;
     box-shadow: -4px 4px 10px rgba(0, 0, 0, 0.75);
@@ -200,14 +201,34 @@ body {
 }
 
 .hobby-left h1 {
-    font-size: 96px;
+    font-size: 80px;
     font-weight: 400;
     line-height: 1.05;
     margin: 0;
 }
 
+.hobby-left p {
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 1.5;
+    padding-right: 500px;
+}
+
+.hobby-left h1 span > span{
+    font-size: 150px;
+    font-weight: 200;
+    color: var(--primary);
+}
+
+.hobby-left p span{
+    font-size: 32px;
+    font-weight: 400;
+    color: var(--primary);
+}
+
 .interests {
-    margin-top: var(--space-xxxl);
+    margin: var(--space-xxxxl);
+    margin-top: 0;
     display: flex;
     gap: var(--space-xxxxl);
     justify-content: center;
@@ -216,7 +237,7 @@ body {
 }
 
 .interests-img {
-    width: 15%;
+    width: 45%;
     aspect-ratio: 1 / 1;
     overflow: hidden;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.75);
@@ -234,9 +255,29 @@ body {
 }
 
 .interests-right h1 {
-    font-size: 96px;
+    font-size: 80px;
     font-weight: 400;
     line-height: 1.05;
     margin: 0;
     text-align: right;
+}
+
+.interests-right p {
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 1.5;
+    align-items: right;
+    padding-left: 200px;
+}
+
+.interests-right h1 span > span{
+    font-size: 150px;
+    font-weight: 200;
+    color: var(--primary);
+}
+
+.interests-right p span{
+    font-size: 32px;
+    font-weight: 400;
+    color: var(--primary);
 }
