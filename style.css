@@ -1,12 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-.material-symbols-outlined {
-    font-variation-settings:
-        'FILL' 1,
-        'wght' 500,
-        'GRAD' 0,
-        'opsz' 24
-}
 
 :root {
     --primary: #D92929;
@@ -14,16 +7,30 @@
     --primary-dark: #0D0D0D;
 
     --space-xs: 0.5rem;
+    /*`8px`*/
     --space-sm: 0.75rem;
+    /*`12px`*/
     --space-md: 1.25rem;
+    /*`20px`*/
     --space-lg: 1.75rem;
+    /*`28px`*/
     --space-xl: 2.5rem;
+    /*`40px`*/
     --space-xxl: 3rem;
+    /*`48px`*/
     --space-xxxl: 4.25rem;
+    /*`68px`*/
     --space-xxxxl: 10rem;
+    /*`160px`*/
+    --space-xxxxxl: 15rem;
+    /*`320px`*/
 
     --transition-smoment: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
+
+/* --------------------------------------- */
+/* -------------- Portfolio -------------- */
+/* --------------------------------------- */
 
 body {
     font-family: 'Prompt', sans-serif;
@@ -33,31 +40,57 @@ body {
     color: var(--primary-dark);
 }
 
-.instagram{
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 1,
+        'wght' 500,
+        'GRAD' 0,
+        'opsz' 24
+}
+
+.instagram {
     position: fixed;
     bottom: var(--space-xl);
     right: var(--space-xl);
 }
 
-.instagram img{
+.instagram img {
     width: var(--space-lg);
 }
 
-#profile{
+#profile,
+#hobby,
+#skillset,
+#project {
     width: 100%;
 }
 
-.profile{
-    margin: var(--space-lg) var(--space-xxxxl);
+.profile,
+.hobby,
+.skillset,
+.project {
+    margin: 0 var(--space-xxxxl);
+    margin-bottom: var(--space-xl);
 }
 
-.topbar{
+.hobby,
+.skillset,
+.project {
+    border-top: 0.05px solid var(--primary-dark);
+}
+
+.topbar {
     display: flex;
     gap: 1000px;
     justify-content: center;
+    margin-top: var(--space-sm);
+    margin-bottom: var(--space-sm);
+    margin-left: var(--space-xxxxl);
+    margin-right: var(--space-xxxxl);
+
 }
 
-.topright ul{
+.topright ul {
     display: flex;
     gap: var(--space-lg);
     align-items: center;
@@ -65,17 +98,145 @@ body {
     margin-right: var(--space-xxl);
 }
 
-.topright ul li{
-    
+.topleft img {
+    width: 60px;
 }
 
-.justifycenter{
+.topright ul li {
+    list-style: none;
+}
+
+.topright ul li a {
+    text-decoration: none;
+    color: var(--primary-dark);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.topright ul li span {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.block {
+    display: block;
+}
+
+.justifycenter {
     display: flex;
-    gap: var(--space-xl);
+    gap: var(--space-xxxxl);
     justify-content: center;
     align-items: center;
 }
 
-.justifycenter img{
-    width: 38%;
+.justifycenter img {
+    width: 35%;
+    border-radius: var(--space-lg);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.75);
+    filter: grayscale(50%);
+}
+
+
+.centerleft h1 {
+    font-size: 96px;
+    font-weight: 400;
+    line-height: 1.05;
+    margin: 0;
+}
+
+.centerleft p {
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.position ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-lg);
+    margin-top: var(--space-lg);
+    padding: 0;
+}
+
+.position ul li {
+    font-size: 16px;
+    font-weight: 300;
+    list-style: none;
+    text-align: center;
+}
+
+.position-item {
+    padding: var(--space-xs);
+    border: 1px solid var(--primary-dark);
+    border-radius: var(--space-xl);
+}
+
+.hobby-content {
+    margin-top: var(--space-xxxl);
+    display: flex;
+    gap: var(--space-xxxxl);
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.hobby-content-img {
+    width: 15%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    box-shadow: -4px 4px 10px rgba(0, 0, 0, 0.75);
+    transform: rotate(5deg);
+}
+
+.hobby-content-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 25% 60%;
+    transform: scale(1.5);
+    transform-origin: 75% 50%;
+    filter: grayscale(50%);
+}
+
+.hobby-left h1 {
+    font-size: 96px;
+    font-weight: 400;
+    line-height: 1.05;
+    margin: 0;
+}
+
+.interests {
+    margin-top: var(--space-xxxl);
+    display: flex;
+    gap: var(--space-xxxxl);
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+.interests-img {
+    width: 15%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.75);
+    transform: rotate(-5deg);
+}
+
+.interests-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 25% 60%;
+    transform: scale(1.5);
+    transform-origin: 75% 50%;
+    filter: grayscale(50%);
+}
+
+.interests-right h1 {
+    font-size: 96px;
+    font-weight: 400;
+    line-height: 1.05;
+    margin: 0;
+    text-align: right;
 }
