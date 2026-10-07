@@ -25,12 +25,22 @@
     --space-xxxxxl: 15rem;
     /*`320px`*/
 
-    --transition-smoment: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
+    --transition-smoment: all 0.3s ease;
 }
 
 /* --------------------------------------- */
 /* -------------- Portfolio -------------- */
 /* --------------------------------------- */
+
+*,
+*::before,
+*::after {
+    transition: var(--transition-smoment);
+}
+
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     font-family: 'Prompt', sans-serif;
@@ -48,33 +58,20 @@ body {
         'opsz' 24
 }
 
-.instagram {
-    position: fixed;
-    bottom: var(--space-xl);
-    right: var(--space-xl);
-}
-
-.instagram img {
-    width: var(--space-lg);
-}
-
 #profile,
-#hobby,
-#skills,
-#project {
+#hobby {
     width: 100%;
+    min-height: 100vh;
 }
 
 .profile,
 .hobby,
-.skills,
 .project {
     margin: 0 var(--space-xxxxl);
     margin-bottom: var(--space-xl);
 }
 
-.hobby,
-.project {
+.hobby {
     border-top: 0.05px solid var(--primary-dark);
 }
 
@@ -110,6 +107,10 @@ body {
     color: var(--primary-dark);
     font-size: 16px;
     font-weight: 400;
+}
+
+.topright ul li a.active {
+    color: var(--primary);
 }
 
 .topright ul li span {
@@ -195,7 +196,7 @@ body {
     object-fit: cover;
     object-position: 25% 60%;
     transform: scale(1.5);
-    transform-origin: 75% 50%;
+    transform-origin: 95% 50%;
     filter: grayscale(50%);
 }
 
@@ -213,13 +214,13 @@ body {
     padding-right: 500px;
 }
 
-.hobby-left h1 span > span{
+.hobby-left h1 span>span {
     font-size: 150px;
     font-weight: 200;
     color: var(--primary);
 }
 
-.hobby-left p span{
+.hobby-left p span {
     font-size: 32px;
     font-weight: 400;
     color: var(--primary);
@@ -254,7 +255,7 @@ body {
 }
 
 .interests-right h1 {
-    font-size: 80px     ;
+    font-size: 80px;
     font-weight: 400;
     line-height: 1.05;
     margin: 0;
@@ -269,45 +270,244 @@ body {
     padding-left: 200px;
 }
 
-.interests-right h1 span > span{
+.interests-right h1 span>span {
     font-size: 150px;
     font-weight: 200;
     color: var(--primary);
 }
 
-.interests-right p span{
+.interests-right p span {
     font-size: 32px;
     font-weight: 400;
     color: var(--primary);
 }
 
-#skills{
+#skills {
     width: 100%;
+    min-height: auto;
     background-color: var(--primary-dark);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 100px 0;
+    box-sizing: border-box;
 }
 
-.skills{
+.skills {
     color: var(--primary-light);
-    
+    background-color: var(--primary-dark);
+    margin: 0 var(--space-xxxxxl);
+    margin-bottom: var(--space-xl);
 }
 
-.skills h1{
+.box-skill {
+    margin: 0;
+}
+
+.skills h1 {
     font-size: 96px;
+    font-weight: 400;
+    margin-bottom: 0;
 }
 
-.skills-item{
+.skills-item {
     list-style: none;
     border-top: 0.05px solid var(--primary-light);
+    opacity: 0;
+    transform: translateX(150px);
 }
 
-.item1{
+.skills-item:last-child {
     border-bottom: 0.05px solid var(--primary-light);
 }
 
-.grid{
+.skills-item.active{
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.skill-row {
+    display: grid;
+    grid-template-columns: 80px 1.5fr 1fr;
+    gap: 24px;
+    align-items: center;
+    font-size: 24px;
+    padding: 42px 0;
+    opacity: .1;
+}
+
+.skill-number {
+    font-size: 16px;
+    opacity: 0.7;
+}
+
+.skill-title {
+    font-size: 36px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.skill-description {
+    font-size: 16px;
+    margin: 0;
+    text-align: left;
+    opacity: 0.8;
+}
+
+#project {
+    width: 100%;
+    min-height: 100vb;
+    padding: 0 0 60px 0;
+    box-sizing: border-box;
+}
+
+.project {
+    margin: 0 var(--space-xxxxxl);
+}
+
+.project h1 {
+    font-size: 96px;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+
+.project-item {
+    list-style: none;
+    border-top: 0.05px solid var(--primary-dark);
+}
+
+.project-item:last-child {
+    border-bottom: 0.05px solid var(--primary-dark);
+}
+
+.project-row {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 200px;
+    gap: 32px;
+    align-items: center;
+    padding: 24px 0;
+}
+
+.project-name {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.project-to {
+    justify-self: center;
+    text-decoration: none;
+    color: inherit;
+    font-size: 14px;
+    border: 1px solid #000;
+    padding: 6px 14px;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.project-img {
+    width: 320px;
+    height: 200px;
+    object-fit: cover;
+    background-color: #555555;
+    border-radius: 2px;
+    justify-self: end;
+}
+
+.as {
+    text-align: center;
+    margin-bottom: var(--space-xxxl);
+}
+
+.as a {
+    background-color: var(--primary-light);
+    color: var(--primary-dark);
+    text-decoration: none;
+    font-size: var(--space-lg);
+    border: 1px solid;
+    border-radius: 20px;
+    padding: var(--space-sm);
+}
+
+.footer-col {
+    margin: 0 var(--space-xxxxl);
+}
+
+.footer {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 100px;
-    font-size: 24px;
-    margin: var(--space-xl) var(--space-sm) var(--space-xl) var(--space-sm);
+    align-items: center;
+    min-height: 100px;
+    padding: 0 var(--space-xxxxl, 8%);
+    box-sizing: border-box;
+    background-color: var(--primary-dark);
+    color: var(--primary-light);
+    font-size: 14px;
+}
+
+.footer-col.left {
+    text-align: left;
+}
+
+.footer-col.center {
+    text-align: center;
+}
+
+.footer-col.right {
+    text-align: right;
+}
+
+.footer a {
+    color: inherit;
+    text-decoration: none;
+    margin-left: 12px;
+    transition: opacity 0.2s;
+}
+
+.topright ul li a:active {
+    color: var(--primary);
+}
+
+.topright ul li a:hover {
+    color: var(--primary);
+}
+
+.position-item:hover {
+    background-color: var(--primary-dark);
+    color: var(--primary-light);
+}
+
+.justifycenter img:hover {
+    filter: grayscale(0);
+}
+
+.hobby-content-img:hover {
+    aspect-ratio: 2 / 1;
+    transform: scale(2);
+    box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.75);
+}
+
+.hobby-content-img img:hover {
+    object-position: 25% 60%;
+    transform-origin: 55% 50%;
+    filter: grayscale(0);
+    transform: scale(2);
+}
+
+.interests-img:hover {
+    aspect-ratio: 2 / 3;
+    transform: scale(1);
+    width: 35%;
+    box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.75);
+}
+
+.interests-img img:hover {
+    object-position: 50% 30%;
+    transform-origin: 50% 50%;
+    filter: grayscale(0);
+    transform: scale(2);
+}
+
+.skill-row:hover{
+    opacity: 1;
 }
