@@ -16,50 +16,54 @@
         <div class="profile">
             <div class="topbar">
                 <div class="topleft">
-                    <img src="./img/Logo.png" alt="Profile Picture">
+                    <a href="./index.html">
+                        <img src="./img/Logo.png" alt="Pakin Logo">
+                    </a>
                 </div>
-                <div class="topright">
+                <button class="menu-button" id="menuButton" aria-label="Open Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <nav class="topright" id="topMenu">
                     <ul>
                         <li>
-                            <a href="./index.html" class="active">
-                                PORTFOLIO
-                            </a>
+                            <a href="./index.html" class="active">PORTFOLIO</a>
                         </li>
-                        <li>
+                        <li class="separator">
                             <span class="material-symbols-outlined">horizontal_distribute</span>
                         </li>
                         <li>
-                            <a href="./project.html">
-                                PROJECT
-                            </a>
+                            <a href="./project.html">PROJECT</a>
                         </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="justifycenter">
+            <div class="centerleft">
+                <h1>
+                    <span class="block">ภาคิน</span>
+                    <span class="block">ลิมโกมลวิลาศ</span>
+                </h1>
+                <p>
+                    <span class="block">นักศึกษาปี 3 ที่หมกมุ่นกับโค้ด งาน 3 มิติ และ VFX</span>
+                    <span class="block">เล่นให้สุด แล้วเอาความสนุกมาทำเป็นโปรเจกต์จริง</span>
+                </p>
+                <div class="position">
+                    <ul>
+                        <li class="position-item">Web Developer</li>
+                        <li class="position-item">Game Developer</li>
+                        <li class="position-item">3D Artist</li>
+                        <li class="position-item">Animator</li>
+                        <li class="position-item">UX/UI</li>
+                        <li class="position-item">Motion Graphics</li>
+                        <li class="position-item">VFX</li>
                     </ul>
                 </div>
             </div>
-            <div class="justifycenter">
-                <div class="centerleft">
-                    <h1>
-                        <span class="block">ภาคิน</span>
-                        <span class="block">ลิมโกมลวิลาศ</span>
-                    </h1>
-                    <p>
-                        <span class="block">นักศึกษาปี 3 ที่หมกมุ่นกับโค้ด งาน 3 มิติ และ VFX</span>
-                        <span class="block">เล่นให้สุด แล้วเอาความสนุกมาทำเป็นโปรเจกต์จริง</span>
-                    </p>
-                    <div class="position">
-                        <ul>
-                            <li class="position-item">Web Developer</li>
-                            <li class="position-item">Game Developer</li>
-                            <li class="position-item">3D Artist</li>
-                            <li class="position-item">Animator</li>
-                            <li class="position-item">UX/UI</li>
-                            <li class="position-item">Motion Graphics</li>
-                            <li class="position-item">VFX</li>
-                        </ul>
-                    </div>
-                </div>
-                <img src="./img/IMG_1264.CR3.jpg" alt="Profile Picture">
-            </div>
+            <img src="./img/IMG_1264.CR3.jpg" alt="Profile Picture">
+        </div>
         </div>
     </section>
     <section id="hobby">
@@ -169,11 +173,12 @@
                     </div>
                 </li>
             </ul>
-        </div>
-    </section>
-    <div class="as">
+            <div class="as">
         <a href="">Assignment</a>
     </div>
+        </div>
+    </section>
+    
     <footer class="footer">
         <div class="footer-col left">
             <span>© 2026 Pakin Limkomolvilas</span>

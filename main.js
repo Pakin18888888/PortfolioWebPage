@@ -3,11 +3,12 @@ window.onload = pageLoad;
 function pageLoad() {
     setupSkillsObserver();
     setupProjects();
+    setupMenu();
 }
 
 function setupSkillsObserver() {
     const items = document.querySelectorAll('.skills-item');
-    
+
     const observerOptions = {
         root: null,
         rootMargin: "0px 0px -15% 0px",
@@ -16,13 +17,13 @@ function setupSkillsObserver() {
 
     const observer = new IntersectionObserver(handleIntersection, observerOptions);
 
-    items.forEach(function(item) {
+    items.forEach(function (item) {
         observer.observe(item);
     });
 }
 
 function handleIntersection(entries) {
-    entries.forEach(function(entry) {
+    entries.forEach(function (entry) {
         if (entry.isIntersecting) {
             entry.target.classList.add('active');
         } else {
@@ -103,8 +104,8 @@ function setupProjects() {
 
     console.log("พบ Project ทั้งหมด:", projects.length);
 
-    projects.forEach(function(project) {
-        project.addEventListener("mouseenter", function() {
+    projects.forEach(function (project) {
+        project.addEventListener("mouseenter", function () {
             console.log("Hover:", project.querySelector(".project-name").textContent);
 
             const projectName = project.querySelector(".project-name").textContent.trim();
@@ -125,12 +126,34 @@ function setupProjects() {
             project.appendChild(detail);
         });
 
-        project.addEventListener("mouseleave", function() {
+        project.addEventListener("mouseleave", function () {
             const detail = project.querySelector(".project-detail");
 
             if (detail) {
                 detail.remove();
             }
         });
+    });
+}
+
+function setupMenu() {
+    const menuButton = document.getElementById("menuButton");
+    const topMenu = document.getElementById("topMenu");
+
+    if (!menuButton || !topMenu) return;
+
+    menuButton.addEventListener("click", function () {
+        menuButton.classList.toggle("active");
+        topMenu.classList.toggle("open");
+    });
+
+    document.addEventListener("click", function (event) {
+        if (
+            !topMenu.contains(event.target) &&
+            !menuButton.contains(event.target)
+        ) {
+            menuButton.classList.remove("active");
+            topMenu.classList.remove("open");
+        }
     });
 }
