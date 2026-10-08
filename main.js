@@ -2,6 +2,7 @@ window.onload = pageLoad;
 
 function pageLoad() {
     setupSkillsObserver();
+    setupProjects();
 }
 
 function setupSkillsObserver() {
@@ -133,7 +134,3 @@ function setupProjects() {
         });
     });
 }
-
-document.addEventListener("DOMContentLoaded", function() {
-    setupProjects();
-});
