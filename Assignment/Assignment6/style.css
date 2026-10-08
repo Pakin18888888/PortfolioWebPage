@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Domine:wght@400..700&display=swap');
+
+:root{
+    --primary: #158afe;
+    --primary-light: #FFFFFF;
+    --primary-dark: #101820;
+
+    --space-xs: 0.5rem;
+    --space-sm: 0.75rem;
+    --space-md: 1.25rem;
+    --space-lg: 1.75rem;
+    --space-xl: 2.5rem;
+    --space-xxl: 3rem;
+    --space-xxxl: 4.25rem;
+    --space-xxxxl: 5rem;
+
+    --transition-smoment: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+body{
+    background-color: var(--primary-dark);
+    font-family: "Domine", serif;
+    margin: 0px auto;
+    color: var(--primary-light);
+}
+
+fieldset{
+    box-shadow:  0px 10px 20px rgba(0, 0, 0, 0.536);
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    margin: var(--space-xxxxl);
+    padding-left: var(--space-xxxxl);
+    padding-right: var(--space-xxxxl);
+    padding-top: var(--space-xxl);
+    padding-bottom: var(--space-xxl);
+    border: none;
+    border-left: solid 5px var(--primary);
+    gap: var(--space-xxl);
+}
+
+legend{
+    font-size: var(--space-xl);
+    color: var(--primary);
+    text-shadow: 0px 0px 5px var(--primary);
+}
+
+input{
+    height: 20px;
+    margin-bottom: var(--space-md);
+    background-color: var(--primary-light);
+    border-radius: 10px;
+    box-shadow: 0px 0px 3px var(--primary-light);
+    border: none
+}
