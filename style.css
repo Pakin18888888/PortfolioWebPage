@@ -28,14 +28,17 @@
     --transition-smoment: all 0.3s ease;
 }
 
-/* --------------------------------------- */
-/* -------------- Portfolio -------------- */
-/* --------------------------------------- */
-
 *,
 *::before,
 *::after {
     transition: var(--transition-smoment);
+}
+
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 html {
