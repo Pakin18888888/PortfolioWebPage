@@ -49,13 +49,13 @@ const projectData = {
         role: "3D Artist / Animator",
         timeline: "--.--",
         year: "2021-2026",
-        image: "images/3d-model.png"
+        image: "./img/Model.png"
     },
-    "VFX": {
-        role: "VFX Artist",
+    "VFX/Motion Graphics": {
+        role: "VFX/Motion Graphics",
         timeline: "--.--",
         year: "2022-2026",
-        image: "images/vfx.png"
+        image: "./img/Motion.png"
     }
 };
 
