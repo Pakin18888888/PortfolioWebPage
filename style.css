@@ -321,7 +321,7 @@ body {
     border-bottom: 0.05px solid var(--primary-light);
 }
 
-.skills-item.active{
+.skills-item.active {
     opacity: 1;
     transform: translateX(0);
 }
@@ -414,6 +414,51 @@ body {
     justify-self: end;
 }
 
+.expandable-details,
+.expandable-image {
+    display: grid;
+    grid-template-rows: 0fr;
+    opacity: 0;
+}
+
+/* ทำให้รูปภาพมีสไลด์จากทางซ้ายนิดๆ แบบในคลิป */
+.expandable-image {
+    transform: translateX(-20px);
+    justify-self: end;
+    /* ดันกรอบรูปให้ชิดขวาสุดเสมอ */
+}
+
+/* ซ่อนส่วนเกินเวลายังพับอยู่ */
+.details-inner,
+.image-inner {
+    overflow: hidden;
+}
+
+/* จัดสไตล์ตัวหนังสือ */
+.details-inner {
+    display: flex;
+    gap: 40px;
+    margin-top: 0;
+    transition: margin-top 0.5s ease;
+}
+
+.details-inner small {
+    font-size: 10px;
+    color: #888;
+    letter-spacing: 1px;
+}
+
+.details-inner p {
+    font-size: 14px;
+    margin: 4px 0 0 0;
+    font-weight: 500;
+}
+
+/* ทำให้ชี้เมาส์ได้ทั้งบรรทัด */
+.project-item {
+    cursor: pointer;
+}
+
 .as {
     text-align: center;
     margin-bottom: var(--space-xxxl);
@@ -423,7 +468,7 @@ body {
     background-color: var(--primary-light);
     color: var(--primary-dark);
     text-decoration: none;
-    font-size: var(--space-lg);
+    font-size: var(--space-md);
     border: 1px solid;
     border-radius: 20px;
     padding: var(--space-sm);
@@ -508,6 +553,30 @@ body {
     transform: scale(2);
 }
 
-.skill-row:hover{
+.skill-row:hover {
     opacity: 1;
+}
+
+.project-item:hover .project-name {
+    color: #e50914;
+    transition: color 0.3s ease;
+}
+
+/* 2. กางความสูงและโชว์เนื้อหา + รูปภาพ */
+.project-item:hover .expandable-details,
+.project-item:hover .expandable-image {
+    grid-template-rows: 1fr;
+    opacity: 1;
+    width: 320px;
+    height: 200px;
+}
+
+/* สไลด์รูปเข้าที่ */
+.project-item:hover .expandable-image {
+    transform: translateX(0);
+}
+
+/* 3. ดันรายละเอียดลงมาให้มีระยะห่างจากชื่อ */
+.project-item:hover .details-inner {
+    margin-top: 16px;
 }
