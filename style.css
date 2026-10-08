@@ -585,39 +585,483 @@ body {
     }
 }
 
-@media only screen and (max-width: 1024px) {}
+@media only screen and (max-width: 1024px) {
+
+    .profile,
+    .hobby,
+    .project {
+        margin-left: 40px;
+        margin-right: 40px;
+        margin-bottom: 60px;
+    }
+
+    .topbar {
+        gap: 0;
+        justify-content: space-between;
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+
+    .topright ul {
+        margin-right: 0;
+        gap: 20px;
+        padding: 0;
+    }
+
+    .justifycenter {
+        gap: 40px;
+        align-items: center;
+    }
+
+    .justifycenter img {
+        width: 42%;
+    }
+
+    .centerleft h1 {
+        font-size: 64px;
+    }
+
+    .centerleft p {
+        font-size: 18px;
+    }
+
+    .position ul {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .position ul li {
+        font-size: 14px;
+    }
+
+    .hobby-content {
+        margin: 60px 0;
+        gap: 40px;
+    }
+
+    .hobby-content-img {
+        width: 45%;
+    }
+
+    .hobby-left {
+        width: 55%;
+    }
+
+    .hobby-left h1 {
+        font-size: 60px;
+    }
+
+    .hobby-left h1 span > span {
+        font-size: 100px;
+    }
+
+    .hobby-left p {
+        font-size: 18px;
+        padding-right: 0;
+    }
+
+    .hobby-left p span {
+        font-size: 24px;
+    }
+
+    .interests {
+        margin: 60px 0;
+        gap: 40px;
+    }
+
+    .interests-img {
+        width: 45%;
+    }
+
+    .interests-right {
+        width: 55%;
+    }
+
+    .interests-right h1 {
+        font-size: 60px;
+    }
+
+    .interests-right h1 span > span {
+        font-size: 100px;
+    }
+
+    .interests-right p {
+        font-size: 18px;
+        padding-left: 0;
+    }
+
+    .interests-right p span {
+        font-size: 24px;
+    }
+
+    #skills {
+        padding: 70px 0;
+    }
+
+    .skills {
+        margin: 0 40px;
+    }
+
+    .skills h1 {
+        font-size: 72px;
+    }
+
+    .skill-row {
+        grid-template-columns: 60px 1.5fr 1fr;
+        gap: 20px;
+        padding: 32px 0;
+    }
+
+    .skill-title {
+        font-size: 28px;
+    }
+
+    .skill-description {
+        font-size: 14px;
+    }
+
+    .project {
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+
+    .project h1 {
+        font-size: 72px;
+    }
+
+    .project-row {
+        grid-template-columns: 1fr auto;
+        gap: 20px;
+        padding: 26px 0;
+    }
+
+    .project-name {
+        font-size: 28px;
+    }
+
+    .project-to {
+        font-size: 13px;
+    }
+
+    .project-detail {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+        padding-bottom: 24px;
+    }
+
+    .project-img {
+        grid-column: 1 / -1;
+        width: 100%;
+        height: 220px;
+        margin-top: 0;
+        justify-self: start;
+    }
+
+    .as {
+        margin: 60px 0;
+    }
+
+    .footer {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        text-align: center;
+        padding: 30px 40px;
+    }
+
+    .footer-col.left,
+    .footer-col.center,
+    .footer-col.right {
+        text-align: center;
+        margin: 0;
+    }
+
+    .footer-col.right {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .footer a {
+        margin-left: 0;
+    }
+}
 
 @media only screen and (max-width: 480px) {
 
     .profile,
     .hobby,
     .project {
-        margin: 0 var(--space-lg);
-        margin-bottom: var(--space-xl);
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 40px;
     }
 
     .topbar {
+        gap: 0;
+        margin: 15px 0;
+        align-items: center;
+    }
+
+    .topleft img {
+        width: 45px;
+    }
+
+    .topright ul {
         gap: 10px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .topright ul li a {
+        font-size: 12px;
+    }
+
+    .topright ul li span {
+        font-size: 16px;
     }
 
     .justifycenter {
-        gap: 20px;
+        gap: 30px;
         flex-direction: column-reverse;
+        align-items: stretch;
     }
 
-    .justifycenter img{
+    .justifycenter img {
+        width: 100%;
+        border-radius: 15px;
+    }
+
+    .centerleft {
+        padding: 0;
         width: 100%;
     }
-    .centerleft{
-        padding-left: 100px;
-        padding-right: 100px;
+
+    .centerleft h1 {
+        font-size: 48px;
+        line-height: 1.05;
     }
 
-    .centerleft h1{
-        font-size: 60px;
+    .centerleft p {
+        font-size: 16px;
+        line-height: 1.6;
+        margin-top: 15px;
+    }
+
+    .position ul {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+        margin-top: 20px;
+    }
+
+    .position ul li {
+        font-size: 12px;
+    }
+
+    .position-item {
+        padding: 7px 5px;
+    }
+
+    .hobby-content {
+        margin: 50px 0;
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 30px;
+    }
+
+    .hobby-left {
+        width: 100%;
+    }
+
+    .hobby-content-img {
+        width: 85%;
+        margin: 0 auto;
+        transform: rotate(3deg);
+    }
+
+    .hobby-left h1 {
+        font-size: 48px;
+    }
+
+    .hobby-left h1 span > span {
+        font-size: 70px;
+    }
+
+    .hobby-left p {
+        font-size: 16px;
+        line-height: 1.7;
+        padding-right: 0;
+    }
+
+    .hobby-left p span {
+        font-size: 20px;
+    }
+
+    .interests {
+        margin: 50px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .interests-img {
+        width: 85%;
+        margin: 0 auto;
+        transform: rotate(-3deg);
+    }
+
+    .interests-right {
+        width: 100%;
+    }
+
+    .interests-right h1 {
+        font-size: 48px;
+        text-align: left;
+    }
+
+    .interests-right h1 span > span {
+        font-size: 70px;
+    }
+
+    .interests-right p {
+        font-size: 16px;
+        line-height: 1.7;
+        padding-left: 0;
+        text-align: left;
+    }
+
+    .interests-right p span {
+        font-size: 20px;
+    }
+
+    #skills {
+        padding: 50px 0;
+    }
+
+    .skills {
+        margin: 0 20px;
+    }
+
+    .skills h1 {
+        font-size: 52px;
+        margin-bottom: 20px;
     }
     
-    .centerleft p{
-        
+    .box-skill ul{
+        padding: 0;
+    }
+
+    .skills-item {
+        transform: translateX(50px);
+    }
+
+    .skill-row {
+        grid-template-columns: 35px 1fr;
+        gap: 10px;
+        padding: 24px 0;
+    }
+
+    .skill-number {
+        font-size: 12px;
+    }
+
+    .skill-title {
+        font-size: 22px;
+    }
+
+    .skill-description {
+        grid-column: 2;
+        font-size: 13px;
+        margin-top: -5px;
+    }
+
+    #project {
+        min-height: auto;
+        padding-bottom: 30px;
+    }
+
+    .project {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .project h1 {
+        font-size: 52px;
+        margin-bottom: 20px;
+    }
+
+    .project ul{
+        padding: 0;
+    }
+
+    .project-row {
+        grid-template-columns: 1fr auto;
+        gap: 10px;
+        padding: 22px 0;
+    }
+
+    .project-name {
+        font-size: 20px;
+    }
+
+    .project-to {
+        font-size: 11px;
+        padding: 5px 9px;
+    }
+
+    .project-detail {
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+        padding-bottom: 20px;
+    }
+
+    .project-info span {
+        font-size: 9px;
+    }
+
+    .project-info p {
+        font-size: 12px;
+    }
+
+    .project-img {
+        grid-column: 1 / -1;
+        width: 100%;
+        height: auto;
+        max-height: 180px;
+        object-fit: contain;
+        margin-top: 5px;
+    }
+
+    .as {
+        margin: 40px 0;
+    }
+
+    .as a {
+        font-size: 14px;
+        padding: 10px 18px;
+    }
+
+    .footer {
+        grid-template-columns: 1fr;
+        min-height: auto;
+        gap: 15px;
+        padding: 30px 20px;
+        font-size: 12px;
+    }
+
+    .footer-col.left,
+    .footer-col.center,
+    .footer-col.right {
+        text-align: center;
+        margin: 0;
+    }
+
+    .footer-col.right {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .footer a {
+        margin-left: 0;
     }
 }
