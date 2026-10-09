@@ -813,7 +813,7 @@ body {
     }
 }
 
-@media only screen and (min-width:481px) and (max-width:1024px) {
+@media only screen and (min-width:481px) and (max-width:1376px) {
 
     html,
     body {
@@ -825,6 +825,11 @@ body {
     *::before,
     *::after {
         box-sizing: border-box;
+    }
+
+    #profile,
+    #project{
+        min-height: 60vh;
     }
 
     .profile,
