@@ -467,6 +467,7 @@ body {
     justify-content: center;
     text-align: center;
     margin-top: 50px;
+    justify-self: center;
 }
 
 .as a {
@@ -478,12 +479,12 @@ body {
     border: 1px solid var(--primary-dark);
     border-radius: 20px;
     padding: var(--space-sm) var(--space-md);
+    white-space: nowrap;
 }
 
 #all {
     grid-column: 1/span 5;
-    margin-left: 500px;
-    margin-right: 500px;
+    justify-self: center;
 }
 
 .footer-col {
